@@ -1,3 +1,8 @@
+//////////////////////////////////////////////////////////////////////
+//    Forked from https://github.com/VolosR/ProgrammerKeyboard
+//    Modified 12/28/2024  By: Joseph P. Merten
+//    - Translated Chinese comments to English
+//////////////////////////////////////////////////////////////////////
 #include <Arduino.h>
 #include "T-Keyboard-S3-Pro_Drive.h"
 #include "pin_config.h"
@@ -11,8 +16,8 @@
 #include "AGENCY9.h"
 
 #define KEY_HID_R 'r'
-#define IIC_MAIN_DEVICE_ADDRESS 0x01 // 主设备的IIC地址，默认为0x01
-#define IIC_LCD_CS_DEVICE_DELAY 20   // 选定屏幕等待时间
+#define IIC_MAIN_DEVICE_ADDRESS 0x01 // 主设备的IIC地址，默认为0x01 - IIC address of the master device, default is 0x01
+#define IIC_LCD_CS_DEVICE_DELAY 20   // 选定屏幕等待时间 - Select screen waiting time
 
 int pressed[4]={0};
 int press[4]={0};
@@ -449,7 +454,7 @@ void Iocn_Show(std::vector<unsigned char> device_id, int chosen)
     for (int i = 0; i < device_id.size(); i++)
     {
         IIC_Bus->IIC_WriteC8D8(device_id[i],
-        T_KEYBOARD_S3_PRO_WR_LCD_CS, 0B00000100); // 选定屏幕3 LCD_3
+        T_KEYBOARD_S3_PRO_WR_LCD_CS, 0B00000100); // 选定屏幕3 LCD_3 - Selected screen 3 LCD_3
         delay(IIC_LCD_CS_DEVICE_DELAY);
     }
   sprite->fillScreen(bck);
@@ -496,7 +501,7 @@ void Iocn_Show(std::vector<unsigned char> device_id, int chosen)
     for (int i = 0; i < device_id.size(); i++)
     {
         IIC_Bus->IIC_WriteC8D8(device_id[i],
-                               T_KEYBOARD_S3_PRO_WR_LCD_CS, 0B00000010); // 选定屏幕4 LCD_4
+                               T_KEYBOARD_S3_PRO_WR_LCD_CS, 0B00000010); // 选定屏幕4 LCD_4 - Selected screen 4 LCD_4
         delay(IIC_LCD_CS_DEVICE_DELAY);
     }
     
