@@ -2,6 +2,11 @@
 //    Forked from https://github.com/VolosR/ProgrammerKeyboard
 //    Modified 12/28/2024  By: Joseph P. Merten
 //    - Translated Chinese comments to English
+//
+//    Enhancements/ideas:
+//    - Can we use the knob to cycle throughan array of settings?
+//    - Can we have a config fie of settibgs for thie above cycle?  
+//        This way we have a no-code solution
 //////////////////////////////////////////////////////////////////////
 #include <Arduino.h>
 #include "T-Keyboard-S3-Pro_Drive.h"
